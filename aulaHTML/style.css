@@ -1,38 +1,72 @@
-.caixa-mae{
+* {
+    margin: 0;
+    padding: 0;
+    ;
+}
+
+body {
+    height: 100vh;
+}
+
+.caixa-mae {
     display: flex;
     padding: 100px;
     height: 100vh;
     align-items: center;
     justify-content: space-around;
 }
-.logo-mario{
+
+.logo-mario {
     height: 200px;
 }
-button{
+
+button {
     color: white;
     background-color: #ff0000;
     border: none;
     border-radius: 3px;
-    width: 200px;
-    height: 50px;
+    width: 250px;
+    height: 70px;
     cursor: pointer;
-    text-transform: uppercase;/*caixa alta*/
+    text-transform: uppercase;
+    /*caixa alta*/
     font-weight: bold;
+    font-size: 15px;
+    margin: 10px;
 }
 
-.mario-iude{
+.mario-iude {
     height: 300px;
 }
 
-.caixa-principal{
-
+p {
+    color: white;
+    font-size: 30px;
+    margin: 10px;
+    max-width: 1000px;
 }
 
-.caixa-video{
+.caixa-video {
     position: fixed;
     z-index: -1;
     top: 0;
 }
-video{
+
+video {
     width: 100vw;
+}
+
+.mascara {
+    height: 100vh;
+    width: 100vw;
+    /*abaixo usaremos linear gradiente CSS*/
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 46%, rgba(0, 212, 255, 1) 100%);
+    position: fixed;
+    top: 0;
+}
+.link-whatsap img {
+    height: 70px;
+    position: fixed;
+    right: 60px;
+    bottom: 60px;
 }
