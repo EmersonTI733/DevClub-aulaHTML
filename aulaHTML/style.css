@@ -1,5 +1,9 @@
-body{
+.caixa-mae{
     display: flex;
+    padding: 100px;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-around;
 }
 .logo-mario{
     height: 200px;
@@ -18,4 +22,17 @@ button{
 
 .mario-iude{
     height: 300px;
+}
+
+.caixa-principal{
+
+}
+
+.caixa-video{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+}
+video{
+    width: 100vw;
 }
