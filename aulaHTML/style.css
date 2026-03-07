@@ -24,7 +24,7 @@ button {
     color: white;
     background-color: #ff0000;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
     width: 250px;
     height: 70px;
     cursor: pointer;
@@ -36,7 +36,7 @@ button {
 }
 
 .mario-iude {
-    height: 300px;
+    height: 500px;
 }
 
 p {
@@ -53,14 +53,17 @@ p {
 }
 
 video {
-    width: 100vw;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
 }
 
 .mascara {
     height: 100vh;
     width: 100vw;
     /*abaixo usaremos linear gradiente CSS*/
-    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 46%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(136deg,rgba(0, 0, 0, 1) 0%, rgba(94, 105, 105, 0.6) 100%);
     position: fixed;
     top: 0;
 }
@@ -70,3 +73,71 @@ video {
     right: 60px;
     bottom: 60px;
 }
+
+.header img{
+    height: 60px;
+}
+.header a{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+.header{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30px;
+}
+/* a forma abaixo adiciona eventos ao link*/
+.header a:hover{
+    color: #ff0000;
+    font-size: 31px;
+    transition: 0.7s;
+}
+.formulario-fale-conosco{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    gap: 20px;
+    top: 30%;
+    left: -300px;
+    border-radius: 4px;
+    padding: 20px;
+    transition: left 0.5s ease-in-out;
+}
+.formulario-fale-conosco input{
+    height: 40px;
+    border-radius: 5;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #35fc04;
+}
+.formulario-fale-conosco textarea{
+    height: 100px;
+    width: 270px;
+    border-radius: 5;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #35fc04;
+}
+
+.mascara-formulario{
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(155deg,rgba(18, 10, 16, 0.56) 0%, rgba(35, 65, 77, 0.52) 100%);
+
+}
+
+/* inicial
+top 30%
+left -300px
+
+final
+top 30%
+left 50%
+transform: translateX(-50%  )
+*/

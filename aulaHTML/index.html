@@ -9,6 +9,13 @@
 </head>
 
 <body>
+    <div class="mascara-formulario" onclick="guardeform()"></div>
+    <div class="header">
+        <img src="./img/logo-header.png" alt="logo mario" />
+        <a>Home</a>
+        <a>Nossos Servicos</a>
+        <a>Fale Conosco</a>
+    </div>
     <div class="caixa-video">
         <video src="./img/video.mp4" autoplay muted loop></video>
         <div class="mascara"></div>
@@ -22,7 +29,7 @@
                 dolore
                 magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                 commodo"</p>
-            <button>Entre em contato</button>
+            <button onclick="mostrarform()">Entre em contato</button>
         </div>
 
         <div>
@@ -33,6 +40,16 @@
         <img src="./img/whatsapp.png">
     </a>
 
+    <form action="https://formcarry.com/s/Y0wpL7LbHrn" method="POST" enctype="multipart/form-data"
+        class="formulario-fale-conosco">
+        <input type="text" name="nome" placeholder="digite nome" />
+        <input type="tel" name="telefone" placeholder="digite telefone" />
+        <textarea name="duvida" placeholder="Digite sua duvida"></textarea>
+        <button type="submit">Fale conosco</button>
+    </form>
+
 </body>
+<script src="./script.js">
+</script>
 
 </html>
