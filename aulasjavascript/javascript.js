@@ -26,4 +26,9 @@ const meuObjeto={
     meuObjeto.endereco.cidade= "itacoatiara";
     console.log(meuObjeto);
 
-    
+
+// vamos trabalha aqui o DOM com javasript
+// Document Object Model
+// exemplo getElementById
+    const input= document.getElementById("input-nome");
+    console.log(input);
