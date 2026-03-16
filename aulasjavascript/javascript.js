@@ -35,3 +35,9 @@ const meuObjeto={
 
     const inputclasse= document.getElementsByClassName("inputclass");
     console.log(inputclasse);
+
+    const paragrafos= document.getElementsByTagName("p");
+    console.log(paragrafos);
+
+    const pegueName= document.getElementsByName("endereco");
+    console.log(pegueName);
