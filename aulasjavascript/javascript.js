@@ -32,3 +32,6 @@ const meuObjeto={
 // exemplo getElementById
     const input= document.getElementById("input-nome");
     console.log(input);
+
+    const inputclasse= document.getElementsByClassName("inputclass");
+    console.log(inputclasse);
