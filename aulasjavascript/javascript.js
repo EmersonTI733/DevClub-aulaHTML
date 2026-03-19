@@ -72,3 +72,32 @@ console.log(paragrafo.textContent); //SO HTML
 console.log(paragrafo.innerText);   //LEVA EM CONTA O CSS
 console.log(paragrafo.innerHTML);   //TRAZ TUDO - permite adicionar HTML
 
+// AGORA VAMOS ALTERAR O CSS COM JAVASCRIPT
+
+const botao= document.querySelector(".botao");
+
+botao.style.backgroundColor="gray";
+
+// EVENTOS
+
+function botaocliquei(){
+    alert(elementos.value);
+}
+    //  FAZER REQUISICAO, CONSUMIR API
+//url de teste: https://jsonplaceholder.typicode.com/users
+
+const fetchData = async () => {
+    const url="https://jsonplaceholder.typicode.com/users";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Erro HTTP! status: ${response.status}`);
+    }
+    const data = await response.json();
+    console.log(data[1].name);
+  } catch (error) {
+    console.error('Erro na requisição:', error);
+  }
+};
+
+fetchData();
