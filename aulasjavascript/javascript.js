@@ -74,30 +74,78 @@ console.log(paragrafo.innerHTML);   //TRAZ TUDO - permite adicionar HTML
 
 // AGORA VAMOS ALTERAR O CSS COM JAVASCRIPT
 
-const botao= document.querySelector(".botao");
+const botao = document.querySelector(".botao");
 
-botao.style.backgroundColor="gray";
+botao.style.backgroundColor = "gray";
 
 // EVENTOS
 
-function botaocliquei(){
+function botaocliquei() {
     alert(elementos.value);
 }
-    //  FAZER REQUISICAO, CONSUMIR API
+//  FAZER REQUISICAO, CONSUMIR API
 //url de teste: https://jsonplaceholder.typicode.com/users
 
 const fetchData = async () => {
-    const url="https://jsonplaceholder.typicode.com/users";
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Erro HTTP! status: ${response.status}`);
+    const url = "https://jsonplaceholder.typicode.com/users";
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Erro HTTP! status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log(data[0]);
+        
+        const iframe=document.querySelector(".users-api");
+        
+        iframe.innerHTML=data[0];
+        
+
+    } catch (error) {
+        console.error('Erro na requisição:', error);
     }
-    const data = await response.json();
-    console.log(data[1].name);
-  } catch (error) {
-    console.error('Erro na requisição:', error);
-  }
 };
 
-fetchData();
+
+const url = 'https://jsonplaceholder.typicode.com/users';
+
+const preencherTabela = async () => {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error('Erro na requisição');
+    const usuarios = await response.json();
+
+    const tbody = document.querySelector('#tabelaUsuarios tbody');
+    tbody.innerHTML = ''; // limpa conteúdo anterior
+
+    usuarios.forEach(({ id, name, address:{ city, zipcode } }) => {
+      const tr = document.createElement('tr'); // cria linha
+
+
+      // cria célula para id
+      const tdId = document.createElement('td');
+      tdId.textContent = id;
+
+      // célula para nome
+      const tdNome = document.createElement('td');
+      tdNome.textContent = name;
+
+      // célula para cidade
+      const tdCity = document.createElement('td');
+      tdCity.textContent = city;
+
+      //criar celula para telefone
+      const tdTelefone = document.createElement('td');
+      tdTelefone.textContent= zipcode;
+
+      // adiciona células na linha
+      tr.append(tdId, tdNome, tdCity, tdTelefone);
+
+      // adiciona linha no corpo da tabela
+      tbody.appendChild(tr);
+    });
+    
+  } catch (error) {
+    console.error('Erro:', error);
+  }
+};

@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aulas javascript</title>
 </head>
+
 <body>
     <form>
-        <input id="input-nome" placeholder="nome" value="emerson"/>
+        <input id="input-nome" placeholder="nome" value="emerson" />
         <input class="inputclass" placeholder="idade">
-        <input name="endereco" placeholder="name"/>
+        <input name="endereco" placeholder="name" />
         <button onclick="botaocliquei()" class="botao"> click aqui</button>
     </form>
     <p class="paragra">xplicabo officiis <b>nobis</b> illo. Necessitatibus!</p>
     <p> dignissimos quis cum, accusamus quo, explicabo officiis nobis illo. Necessitatibus!</p>
     <p> dignissimos quis cum, accusamus quo, explicabo officiis nobis illo. Necessitatibus!</p>
 
+    <button style="background-color: rgb(255, 127, 150);" onclick="fetchData()">click no botao</button>
+    <div class="users-api"></div>
+
+    <button style="background-color: rgb(255, 127, 150);" onclick="preencherTabela()">Carregar Tabela</button>
+    <table id="tabelaUsuarios" border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>cidade</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Linhas serão inseridas aqui -->
+        </tbody>
+    </table>
+
 </body>
 <script src="./javascript.js"></script>
+
 </html>
